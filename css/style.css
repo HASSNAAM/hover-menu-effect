@@ -2,6 +2,10 @@
     padding: 0;
     margin: 0;
 }
+html,body{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 body{
     background: linear-gradient(#01012e,#240019);
     height: 100vh;
@@ -12,14 +16,17 @@ section{
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 ul{
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
 }
 ul li{
     list-style: none;
-    margin: 14px 0;
+    margin: 14px auto;
 }
 ul li a{
     position: relative;
@@ -38,14 +45,14 @@ ul li a{
      text-transform: uppercase;
      margin: 10px;
 }
-ul:hover li a{
-    opacity: 0;
-}
 ul li a:hover{
-     opacity: 1;
-    transform: scale(1.5);
+    transform: scale(1.3);
     background: darkmagenta;
-   
+    z-index: 100;
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
 }
 ul li::after{
     content: attr(data-text);
